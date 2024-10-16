@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mensagem Importante</title>
+    <style>
+        body {
+            background-color: rgb(0, 0, 0);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-size: 2em;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .moving-text {
+            animation: move 5s linear infinite;
+            white-space: nowrap;
+        }
+
+        @keyframes move {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+
+        video {
+            margin-top: 20px;
+            width: 100%; /* Largura total do contêiner */
+            max-width: 480px; /* Largura máxima do vídeo */
+            height: auto; /* Mantém a proporção */
+        }
+    </style>
+</head>
+<body>
+    <div class="moving-text">Você não deveria ter tocado</div>
+    <div class="moving-text">agora faz o pix</div>
+    <video controls>
+        <source src="pix.mp4" type="video/mp4">
+        Seu navegador não suporta o vídeo.
+    </video>
+</body>
+</html>
